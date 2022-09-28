@@ -1,11 +1,16 @@
 import { Container, Content } from './styles'
 
-function Header() {
+interface headerProps {
+  onOpenNewTransactionModal: any
+}
+function Header({ onOpenNewTransactionModal }: headerProps) {
   return (
     <Container>
       <Content>
         <h2>ControleFinanceiro</h2>
-        <button type="button">Nova transação</button>
+        <button type="button" onClick={onOpenNewTransactionModal}>
+          Nova transação
+        </button>
       </Content>
     </Container>
   )
